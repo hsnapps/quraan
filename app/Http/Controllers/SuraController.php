@@ -84,4 +84,10 @@ class SuraController extends Controller
         $lang = $request->has('lang') ? $request->lang :'ar';
         return response()->json(__('langs', [], $lang));
     }
+
+    public function about(Request $request)
+    {
+        $lang = $request->has('lang') ? $request->lang :'ar';
+        return response()->json(__('about', [], $lang));
+    }
 }

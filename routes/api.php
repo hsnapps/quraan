@@ -7,3 +7,4 @@ Route::get('suras', 'SuraController@listSuras');
 Route::get('verses', 'SuraController@getVerses');
 Route::get('langs', 'SuraController@getAvailableLnaguages');
 Route::get('find', 'SuraController@find');
+Route::get('about', 'SuraController@about');

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `suras` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT,
+	`lang_id` SMALLINT NOT NULL,
+	`sura_id` INTEGER NOT NULL,
+	`verse` INTEGER NOT NULL,
+	`verse_text` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+	PRIMARY KEY (`id`) 
+);

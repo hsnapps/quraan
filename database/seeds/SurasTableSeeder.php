@@ -14,15 +14,7 @@ class SurasTableSeeder extends Seeder
     public function run()
     {
         Sura::truncate();
-        $handle = fopen(base_path('database/sql/arabic.sql'), "r");
-        if ($handle) {
-            while (($sql = fgets($handle)) !== false) {
-                DB::statement($sql);
-            }
-        
-            fclose($handle);
-        } else {
-            logger('Unable to read file!');
-        }
+        $sql = file_get_contents(base_path('database/sql/all.sql'));
+        DB::statement($sql);
     }
 }
